@@ -1,0 +1,14 @@
+CREATE TABLE movies (
+movieid int PRIMARY KEY,
+title text,
+genres text,
+year int,
+rating float,
+hashtag text
+)
+
+CREATE TABLE twitter (
+hashtag text PRIMARY KEY,
+username text,
+comment varchar(300)
+)
