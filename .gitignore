@@ -6,6 +6,7 @@ movies.csv
 ratings.csv
 tags.csv
 ml-20m.zip
+config.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
