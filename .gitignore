@@ -7,3 +7,5 @@ movies.csv
 README.txt
 ratings.csv
 tags.csv
+
+config.py
