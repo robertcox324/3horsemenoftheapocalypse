@@ -19,6 +19,6 @@ primary key, and columns for username, user location, and tweet text.
 
 L-oad:
 The final database has two tables. Movies has columns of movieID (primary key), title, genre, 
-release year, average rating, and hashtag. Twitter has columns of hashtag (primary key), comment, 
+release year, average rating, and hashtag. Twitter has columns of hashtag (primary key), tweet, 
 user location, and userID. These tables were chosen to be easily joinable on hashtag, to put a 
-twitter comment next to a movie's rating and other relevant information.
+tweet's text next to a movie's rating and other relevant information.
