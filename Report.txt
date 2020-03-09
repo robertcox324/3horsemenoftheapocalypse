@@ -1,7 +1,7 @@
 E-xtract:
 Our original data sources for this project were the MovieLens movie rating datasets available at
 https://grouplens.org/datasets/movielens/ (ml-20m.zip) which were all in csv format
-and twitter data in json format accessed through an api.
+and twitter data in json format accessed through their developer api.
 
 T-ransform:
 The movie data sets were accessed with movies.csv, tags.csv, and ratings.csv, with relevant
@@ -11,13 +11,14 @@ taken from ratings.csv. After the combined movies table was formed with movieId,
 genres, year, and rating, first we had to remove the year in "(yyyy)" format from the end 
 of the title column entries. After that, we removed all empty spaces from the titles, added a
 # sign in front of each result, and put all of that into its own new hashtag column in the 
-movies dataframe. Finally, we selected all movies from 2010 onwards that had an average rating 
-greater than or equal to 4 stars. We then used those hashtags we created to access twitter and 
-find a relevant comment for each movie. A twitter dataframe was created with hashtag primary key, 
-and columns for username and text taken from the first result.
+movies dataframe. Finally, we narrowed our selection of movies down based on the following conditions:
+The movies selected were all movies from 1990 onwards, with genres of "animation" or "fantasy" and
+an average rating greater than or equal to 4 stars. We then used those hashtags we created to access 
+twitter and find a relevant comment for each movie. A twitter dataframe was created with hashtag 
+primary key, and columns for username, user location, and tweet text.
 
 L-oad:
 The final database has two tables. Movies has columns of movieID (primary key), title, genre, 
-release year, average rating, and hashtag. Twitter has columns of hashtag (primary key), comment, and userID.
-These tables were chosen to be easily joinable on hashtag, to put a twitter comment next to a movie's
-rating and other relevant information.
+release year, average rating, and hashtag. Twitter has columns of hashtag (primary key), comment, 
+user location, and userID. These tables were chosen to be easily joinable on hashtag, to put a 
+twitter comment next to a movie's rating and other relevant information.

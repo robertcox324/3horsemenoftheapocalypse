@@ -1,14 +1,15 @@
 CREATE TABLE movies (
-movieid int PRIMARY KEY,
+movieId int PRIMARY KEY,
 title text,
 genres text,
 year int,
 rating float,
-hashtag text
-)
+hashtags text
+);
 
 CREATE TABLE twitter (
-hashtag text PRIMARY KEY,
-username text,
-comment varchar(300)
-)
+hashtags text PRIMARY KEY,
+user_name text,
+tweet varchar(300),
+location text
+);
